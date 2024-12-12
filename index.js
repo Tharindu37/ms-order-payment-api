@@ -50,7 +50,7 @@ mongoose.connect(process.env.MONGO_URI, {
     .catch(err => console.error('Failed to connect to MongoDB:', err));
 
 // Routes
-app.use('/api/v1', OrderRoute);
+app.use('order-payment-service/api/v1', OrderRoute);
 
 // Default route
 app.get('/', (req, res) => {
